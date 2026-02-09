@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  padding-bottom: 60px;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+.footer__title {
+  margin: 0;
+  padding: 0;
+}
