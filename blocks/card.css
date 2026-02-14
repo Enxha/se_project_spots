@@ -8,7 +8,7 @@
   height: 413px;
   object-fit: cover;
   display: block;
-  border-radius: 4%;
+  border-radius: 8px;
 }
 
 .card__content {
@@ -20,6 +20,8 @@
 .card__title {
   margin: 0;
   padding: 0;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .card__like-button {
