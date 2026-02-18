@@ -11,8 +11,8 @@
 
 ## The link to the deployed project on GitHub Pages
 
-- Please click [here] to see the website.(https://enxha.github.io/se_project_spots/)
+- Please click [here](https://enxha.github.io/se_project_spots/) to see the website.
 
 ## The link to the project pitch video
 
-Click [here](https://drive.google.com/file/d/1af1ZNGCHWGCE6YDBmxJXzBO3AU-Pa7k6/view?usp=drive_link).
+- Click [here](https://drive.google.com/file/d/1af1ZNGCHWGCE6YDBmxJXzBO3AU-Pa7k6/view?usp=drive_link).
