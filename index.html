@@ -26,7 +26,7 @@
             alt="Profile Avatar"
             class="profile__avatar"
           />
-          <div class="profile__column">
+          <div class="profile__column" id="profile-content">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-button">
@@ -118,7 +118,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-button"></button>
           <h2 class="modal__title">Edit profile</h2>
-          <form class="modal__form">
+          <form class="modal__form" id="profile-form">
             <label for="profile-name-input" class="modal__label">
               Name
               <input
@@ -145,7 +145,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close-button"></button>
           <h2 class="modal__title">New post</h2>
-          <form class="modal__form">
+          <form class="modal__form" id="post-form">
             <label for="card-image-input" class="modal__label">
               Image link
               <input
