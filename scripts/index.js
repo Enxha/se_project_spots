@@ -1,23 +1,4 @@
-const editBtn = document.querySelector(".profile__edit-button");
-const addBtn = document.querySelector(".profile__add-button");
-const editProfileModal = document.querySelector("#edit-profile-modal");
-const addNewPostModal = document.querySelector("#new-post-modal");
-const closeBtnProfile = editProfileModal.querySelector(".modal__close-button");
-const closeBtnPost = addNewPostModal.querySelector(".modal__close-button");
-const profileContent = document.querySelector("#profile-content");
-const profileName = profileContent.querySelector(".profile__name");
-const profileDescription = profileContent.querySelector(
-  ".profile__description",
-);
-const inputName = editProfileModal.querySelector("#profile-name-input");
-const inputDescription = editProfileModal.querySelector(
-  "#profile-description-input",
-);
-const saveProfileForm = editProfileModal.querySelector("#profile-form");
-const inputImagelink = addNewPostModal.querySelector("#card-image-input");
-const inputCaption = addNewPostModal.querySelector("#card-caption-input");
-const savePostForm = addNewPostModal.querySelector("#post-form");
-let initialCards = [
+const initialCards = [
   {
     name: "Val Thorens",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
@@ -43,6 +24,26 @@ let initialCards = [
     Link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
+
+const editBtn = document.querySelector(".profile__edit-button");
+const addBtn = document.querySelector(".profile__add-button");
+const editProfileModal = document.querySelector("#edit-profile-modal");
+const addNewPostModal = document.querySelector("#new-post-modal");
+const closeBtnProfile = editProfileModal.querySelector(".modal__close-button");
+const closeBtnPost = addNewPostModal.querySelector(".modal__close-button");
+const profileContent = document.querySelector("#profile-content");
+const profileName = profileContent.querySelector(".profile__name");
+const profileDescription = profileContent.querySelector(
+  ".profile__description",
+);
+const inputName = editProfileModal.querySelector("#profile-name-input");
+const inputDescription = editProfileModal.querySelector(
+  "#profile-description-input",
+);
+const saveProfileForm = editProfileModal.querySelector("#profile-form");
+const inputImagelink = addNewPostModal.querySelector("#card-image-input");
+const inputCaption = addNewPostModal.querySelector("#card-caption-input");
+const savePostForm = addNewPostModal.querySelector("#post-form");
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
