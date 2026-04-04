@@ -9,6 +9,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .card__content {
@@ -90,5 +91,8 @@
   .card__title {
     font-size: 16px;
     max-width: 235px;
+  }
+  .card__delete-button {
+    left: 246px;
   }
 }

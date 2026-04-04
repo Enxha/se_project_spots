@@ -56,7 +56,7 @@
 }
 
 .profile__edit-button:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .profile__add-button {

@@ -45,7 +45,7 @@ const inputDescription = editProfileModal.querySelector(
   "#profile-description-input",
 );
 const saveProfileForm = editProfileModal.querySelector("#profile-form");
-const inputImagelink = addNewPostModal.querySelector("#card-image-input");
+const inputImageLink = addNewPostModal.querySelector("#card-image-input");
 const inputCaption = addNewPostModal.querySelector("#card-caption-input");
 const savePostForm = addNewPostModal.querySelector("#post-form");
 const cardTemplate = document
@@ -97,13 +97,12 @@ function handleProfileFormSubmit(evt) {
 }
 function handlePostFormSubmit(evt) {
   evt.preventDefault();
-  const data = { name: "", link: "" };
-  data.name = inputCaption.value;
-  data.link = inputImagelink.value;
-
+  const data = { name: inputCaption.value, link: inputImageLink.value };
   const cardElement = getCardElement(data);
+
   cardsList.prepend(cardElement);
   closeModal(addNewPostModal);
+  evt.target.reset();
 }
 
 editBtn.addEventListener("click", () => {

@@ -82,11 +82,10 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
-  border-radius: 8px;
+  border: 1px 8px;
   border: 1px solid rgba(33, 33, 33, 0.4);
   margin-top: 8px;
   margin-bottom: 32px;
-  border-width: 1px;
   padding: 16px 12px;
 }
 
@@ -164,5 +163,8 @@
   .modal__close-button_type_preview {
     top: -48px;
     right: 0;
+  }
+  .modal__caption {
+    font-size: 16px;
   }
 }
