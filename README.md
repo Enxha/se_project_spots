@@ -11,7 +11,7 @@
 
 ## The link to the deployed project on GitHub Pages
 
-- Please click [here](https://enxha.github.io/se_project_spots/) to see the website.
+- Please click [here](https://eladidel.github.io/se_project_spots/) to see the website.
 
 ## The link to the project pitch video
 
