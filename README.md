@@ -15,4 +15,4 @@
 
 ## The link to the project pitch video
 
-- Click [here](https://drive.google.com/file/d/1af1ZNGCHWGCE6YDBmxJXzBO3AU-Pa7k6/view?usp=drive_link).
+- Click [here]().

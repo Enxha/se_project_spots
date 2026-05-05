@@ -28,13 +28,11 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
 ];
-
+// Profile
 const editBtn = document.querySelector(".profile__edit-button");
 const addBtn = document.querySelector(".profile__add-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
-const addNewPostModal = document.querySelector("#new-post-modal");
 const closeBtnProfile = editProfileModal.querySelector(".modal__close-button");
-const closeBtnPost = addNewPostModal.querySelector(".modal__close-button");
 const profileContent = document.querySelector("#profile-content");
 const profileName = profileContent.querySelector(".profile__name");
 const profileDescription = profileContent.querySelector(
@@ -45,6 +43,10 @@ const inputDescription = editProfileModal.querySelector(
   "#profile-description-input",
 );
 const saveProfileForm = editProfileModal.querySelector("#profile-form");
+
+// Post
+const addNewPostModal = document.querySelector("#new-post-modal");
+const closeBtnPost = addNewPostModal.querySelector(".modal__close-button");
 const inputImageLink = addNewPostModal.querySelector("#card-image-input");
 const inputCaption = addNewPostModal.querySelector("#card-caption-input");
 const savePostForm = addNewPostModal.querySelector("#post-form");
@@ -53,10 +55,15 @@ const cardTemplate = document
   .content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
 
+// Preview
 const previewModal = document.querySelector("#preview-modal");
-const closePreviewBtn = previewModal.querySelector(".modal__close-button");
 const modalImage = previewModal.querySelector(".modal__image");
 const modalCaption = previewModal.querySelector(".modal__caption");
+
+// General
+const closePreviewBtn = previewModal.querySelector(".modal__close-button");
+const cardSaveButton = savePostForm.querySelector(".modal__save-button");
+const modals = document.querySelectorAll(".modal");
 
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -103,12 +110,14 @@ function handlePostFormSubmit(evt) {
   cardsList.prepend(cardElement);
   closeModal(addNewPostModal);
   evt.target.reset();
+  disabledButton(cardSaveButton, settings);
 }
 
 editBtn.addEventListener("click", () => {
-  openModal(editProfileModal);
   inputName.value = profileName.textContent;
   inputDescription.value = profileDescription.textContent;
+  resetValidation(saveProfileForm, [inputName, inputDescription], settings);
+  openModal(editProfileModal);
 });
 
 addBtn.addEventListener("click", () => openModal(addNewPostModal));
@@ -122,6 +131,19 @@ closePreviewBtn.addEventListener("click", () => closeModal(previewModal));
 saveProfileForm.addEventListener("submit", handleProfileFormSubmit);
 
 savePostForm.addEventListener("submit", handlePostFormSubmit);
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
+  modal.addEventListener("keydown", (evt) => {
+    if (evt.key === "Escape") {
+      closeModal(modal);
+    }
+  });
+});
 
 initialCards.forEach(function (card) {
   const cardElement = getCardElement(card);
