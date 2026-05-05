@@ -92,6 +92,10 @@
 .modal__input-error {
   color: rgba(255, 0, 0, 0.7);
   margin-top: 8px;
+  display: none;
+}
+
+.modal__input-error_visible {
   display: block;
 }
 

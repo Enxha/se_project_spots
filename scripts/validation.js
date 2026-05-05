@@ -4,6 +4,7 @@ const settings = {
   submitButtonSelector: ".modal__save-button",
   inactiveButtonClass: "modal__button_inactive",
   inputErrorClass: "modal__input_type_error",
+  errorMessageClass: "modal__input-error_visible",
 };
 
 function hasInvalidInput(inputList) {
@@ -14,14 +15,14 @@ function hasInvalidInput(inputList) {
 
 function toggleButtonState(inputList, buttonElement, config) {
   if (hasInvalidInput(inputList)) {
-    disabledButton(buttonElement, config);
+    disableButton(buttonElement, config);
   } else {
     buttonElement.classList.remove(config.inactiveButtonClass);
     buttonElement.disabled = false;
   }
 }
 
-function disabledButton(buttonElement, config) {
+function disableButton(buttonElement, config) {
   buttonElement.disabled = true;
   buttonElement.classList.add(config.inactiveButtonClass);
 }
@@ -35,12 +36,14 @@ function resetValidation(formElement, inputList, config) {
 function showInputError(formElement, inputElement, errorMessage, config) {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add(config.inputErrorClass);
+  errorElement.classList.add(config.errorMessageClass);
   errorElement.textContent = errorMessage;
 }
 
 function hideInputError(formElement, inputElement, config) {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.remove(config.inputErrorClass);
+  errorElement.classList.remove(config.errorMessageClass);
   errorElement.textContent = "";
 }
 
